@@ -132,22 +132,19 @@ p {
   margin: 0 4px;
   cursor: pointer;
   border-radius: var(--size-border-radius);
-}
-
-.navbar__menu__item.active {
-  border: 1px solid var(--color-white);
+  border: 1px solid transparent;
 }
 
 .navbar__menu__item:hover {
+  border-color: var(--color-white);
   background-color: var(--color-dark-pink);
-  border-radius: (--size-border-radius);
   transition: all 300ms ease;
 }
 
 .navbar__toggle-btn {
   position: absolute;
   right: 32px;
-  top: 5px;
+  top: 20px;
   font-size: 24px;
   color: var(--color-white);
   display: none;
@@ -320,14 +317,14 @@ p {
 }
 /* active되거나 hover가 된 경우 */
 /* category__btn.active 이렇게 코드를 짜면 지금 선택된 것을 의미한다. */
-.category__btn.active,
+.category__btn.selected,
 .category__btn:hover {
   background-color: var(--color-dark-blue);
   color: var(--color-white);
 }
 /* 카테고리 버튼이 엑티브인 상태의 카테고리 카운트와 카테고리 버튼이
  마우스가 올라왔을때 안에있는 카테고리 카운트일때만 */
-.category__btn.active .category__count,
+.category__btn.selected .category__count,
 .category__btn:hover .category__count {
   opacity: 1;
   top: 0;
@@ -401,7 +398,7 @@ p {
 }
 
 .project__description h3 {
-  color: var(--color-white);
+  color: var(--color-orange);
 }
 
 .project__description h3:after {
@@ -409,10 +406,10 @@ p {
   display: block;
   position: relative;
   left: 50%;
-  width: 25px;
+  width: 50px;
   height: 2px;
   background-color: var(--color-dark-white);
-  margin-left: -12px;
+  transform: translateX(-50%);
   margin-top: 8px;
 }
 
@@ -514,11 +511,18 @@ p {
     flex-direction: column;
     align-items: flex-start;
   }
+  #navbar.navbar--dark {
+    padding: 16px;
+  }
   .navbar__menu {
     flex-direction: column;
     text-align: center;
     width: 100%;
     display: none;
+  }
+  .navbar__menu.open {
+    display: block;
+    background-color: var(--color-dark-blue);
   }
   .about__majors {
     flex-direction: column;

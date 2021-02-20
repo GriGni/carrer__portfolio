@@ -24,8 +24,17 @@ function BtnScrollIntoView(event) {
   if (link === null || link === undefined) {
     return;
   }
+  navbarMenu.classList.remove("open");
   scrollIntoView(link);
 }
+
+//navBar toggle button for small screen
+
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+
+navbarToggleBtn.addEventListener("click", (e) => {
+  navbarMenu.classList.toggle("open");
+});
 
 //handle click on "contact me" button on home
 
@@ -72,6 +81,17 @@ workBtnContainer.addEventListener("click", (e) => {
   if (filter == null) {
     return;
   }
+  // Remove selection from the previous item and select the new one
+  const active = document.querySelector(".category__btn.selected");
+  console.log(active);
+  active.classList.remove("selected");
+  console.log(e.target);
+  // e.target.classList.add("selected") ||
+  //   e.target.parentNode.classList.add("selected"); 아래와 같은 코드
+  const target =
+    e.target.nodeName === "BUTTON" ? e.target : e.target.parentNodel;
+  target.classList.add("selected");
+
   projectContainer.classList.add("anim-out");
   setTimeout(() => {
     projects.forEach((project) => {
