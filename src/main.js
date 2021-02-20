@@ -31,9 +31,19 @@ function BtnScrollIntoView(event) {
   if (link === null || link === undefined) {
     return;
   }
-  target.classList.add("active");
-  console.log(link);
-  let scrollTo = document.querySelector(link);
+  scrollIntoView(link);
+}
+
+//handle click on "contact me" button on home
+
+const homeContactBtn = document.querySelector(".home__contact");
+
+homeContactBtn.addEventListener("click", () => {
+  scrollIntoView("#contact");
+});
+
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
 }
 
