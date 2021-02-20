@@ -6,7 +6,7 @@
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
   --color-dark-blue: #4ca3c2;
-  --color-dark-pink: #ff6863;
+  --color-dark-pink: #f79d3b;
   --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
   --color-light-grey: #7c7979;
@@ -104,6 +104,7 @@ p {
   position: fixed;
   width: 100%;
   transition: all 500ms ease-in-out;
+  z-index: 1;
 }
 
 #navbar.navbar--dark {
