@@ -47,7 +47,7 @@
       <h2 class="home__description">A Front-End developer</h2>
       <button class="home__contact">CONTACT ME</button>
     </section>
-    <section id="about">
+    <section id="about" class="section section__container">
       <h1 class="about__title">About me</h1>
       <p class="about__description">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi dolor
@@ -58,46 +58,64 @@
       <div class="about__majors">
         <div class="major">
           <div class="major__icon"><i class="fab fa-react"></i></div>
-          <div class="major__title">Front-End</div>
-          <div class="major__description">
+          <h2 class="major__title">Front-End</h2>
+          <p class="major__description">
             HTML, CSS, JavaScript, TypeScript, <br />
             React, Web APIs
-          </div>
+          </p>
         </div>
 
         <div class="major">
-          <div class="major__icon"><i class="fab fa-react"></i></div>
-          <div class="major__title">Front-End</div>
-          <div class="major__description">
+          <div class="major__icon"><i class="fas fa-mobile-alt"></i></div>
+          <h2 class="major__title">Mobile</h2>
+          <p class="major__description">
             HTML, CSS, JavaScript, TypeScript, <br />
             React, Web APIs
-          </div>
+          </p>
         </div>
 
         <div class="major">
-          <div class="major__icon"><i class="fab fa-react"></i></div>
-          <div class="major__title">Front-End</div>
-          <div class="major__description">
+          <div class="major__icon"><i class="fas fa-server"></i></div>
+          <h2 class="major__title">Back-End</h2>
+          <p class="major__description">
             HTML, CSS, JavaScript, TypeScript, <br />
             React, Web APIs
           </div>
         </div>
-        <div class="about__jobs">
-          <div class="job">
-            <img
-              src="./img/university/대학교마크.gif"
-              alt="한국외대"
-              class="job__logo"
-            />
+      </div>
+      <div class="about__jobs">
+        <div class="job">
+          <img
+            src="./img/codestates_logo.png"
+            alt="코드스테이츠"
+            class="job__logo"
+            width=100px;
+            height=100px;
+          />
+          <div class="job__description">
+          <p class="job__name">코드스테이츠</p>
+          <p class="job__period">2020.07.23 ~ 2020.12.24</p>
+          </div>
+        </div>
+        <div class="job">
+          <img
+            src="./img/university/대학교마크.gif"
+            alt="한국외대"
+            class="job__logo"
+            width=100px;
+            height=100px;
+          />
+          <div class="job__description">
             <p class="job__name">한국외국어대학교 글로벌 캠퍼스</p>
             <p class="job__period">2010.03.02 ~ 2019.02.22</p>
           </div>
         </div>
       </div>
     </section>
-    <section id="skills">
-      <h1 class="skills__title"></h1>
-      <h2 class="skills__subTitle"></h2>
+    <section id="skills" class="section">
+      <div class="section__container">
+      <h1 class="skills__title">Skills</h1>
+      <h2 class="skills__subTitle">Skills & Attributes</h2>
       <p class="skills__description">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
         necessitatibus nisi suscipit quia dolorum nihil vel alias quis qui
@@ -113,52 +131,52 @@
               <span>99%</span>
             </div>
             <div class="skill__bar">
-              <div class="skill__value"></div>
+              <div class="skill__value" style="width: 99%"></div>
             </div>
           </div>
           <div class="skill">
             <div class="skill__description">
-              <span>HTML</span>
+              <span>CSS</span>
               <span>99%</span>
             </div>
             <div class="skill__bar">
-              <div class="skill__value"></div>
+              <div class="skill__value" style="width: 80%"></div>
             </div>
           </div>
           <div class="skill">
             <div class="skill__description">
-              <span>HTML</span>
+              <span>JavaScript</span>
               <span>99%</span>
             </div>
             <div class="skill__bar">
-              <div class="skill__value"></div>
+              <div class="skill__value" style="width: 99%"></div>
             </div>
           </div>
           <div class="skill">
             <div class="skill__description">
-              <span>HTML</span>
+              <span>TypeScript</span>
               <span>99%</span>
             </div>
             <div class="skill__bar">
-              <div class="skill__value"></div>
+              <div class="skill__value" style="width: 67%"></div>
             </div>
           </div>
           <div class="skill">
             <div class="skill__description">
-              <span>HTML</span>
+              <span>React</span>
               <span>99%</span>
             </div>
             <div class="skill__bar">
-              <div class="skill__value"></div>
+              <div class="skill__value" style="width: 50%"></div>
             </div>
           </div>
           <div class="skill">
             <div class="skill__description">
-              <span>HTML</span>
+              <span>Nodejs</span>
               <span>99%</span>
             </div>
             <div class="skill__bar">
-              <div class="skill__value"></div>
+              <div class="skill__value" style="width: 70%"></div>
             </div>
           </div>
         </div>
@@ -183,8 +201,9 @@
           </div>
         </div>
       </div>
+    </div>
     </section>
-    <section id="work">
+    <section id="work" class="section">
       <h1>My work</h1>
       <h3>Projects</h3>
       <div class="work__categories">
@@ -306,7 +325,7 @@
         </div>
       </div>
     </section>
-    <section id="testimonials">
+    <section id="testimonials" class="section">
       <h1>Testimonials</h1>
       <h3>See what they say about me</h3>
       <div class="testimonials">
@@ -326,7 +345,7 @@
         </div>
       </div>
     </section>
-    <section id="contact">
+    <section id="contact" class="section">
       <h1 class="contact__title">Let's talk</h1>
       <h2 class="contact__email">amistadlee10@gmail.com</h2>
       <div class="contact__links">
