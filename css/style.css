@@ -476,6 +476,25 @@ p {
 .contact__rigths {
   font-size: x-small;
 }
+.arrow-up {
+  background-color: var(--color-dark-blue);
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  font-size: 50px;
+  color: var(--color-white);
+  cursor: pointer;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease-in;
+}
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 /* 최소한의 것(차이점)만 들어가야 한다. */
 @media screen and (max-width: 768px) {

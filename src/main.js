@@ -39,6 +39,20 @@ homeContactBtn.addEventListener("click", () => {
 
 const Home = document.querySelector(".home__container");
 const HomeHeight = Home.getBoundingClientRect().height;
+const arrowUp = document.querySelector(".arrow-up");
+
+arrowUp.addEventListener("click", () => {
+  console.log("hi");
+  scrollIntoView("#home");
+});
+// show "arrow up" button when scrolling down
+document.addEventListener("scroll", () => {
+  if (window.scrollY > HomeHeight / 2) {
+    arrowUp.classList.add("visible");
+  } else {
+    arrowUp.classList.remove("visible");
+  }
+});
 
 function fadeOutHome() {
   Home.style.opacity = 1 - window.scrollY / HomeHeight;
