@@ -5,7 +5,7 @@
   --color-white: #ffffff;
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
-  --color-pink: #fe918d;
+  --color-dark-blue: #4ca3c2;
   --color-dark-pink: #ff6863;
   --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
@@ -97,11 +97,19 @@ p {
 #navbar {
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-pink);
+  background-color: transparent;
   align-items: center;
   color: var(--color-white);
   padding: 0 16px;
+  position: fixed;
+  width: 100%;
+  transition: all 500ms ease-in-out;
 }
+
+#navbar.navbar--dark {
+  background-color: var(--color-dark-blue);
+}
+
 .navbar__logo {
   display: flex;
   justify-content: center;
@@ -148,6 +156,7 @@ p {
 #home {
   background: url("../img/background.png") center/cover no-repeat;
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 .home__avatar {
@@ -200,7 +209,7 @@ p {
 }
 /* circle안에 마우스가 드렁왔을 때 fa-mobile-alt만 반응하도록 만들기 */
 .major__icon:hover i {
-  color: var(--color-pink);
+  color: var(--color-dark-blue);
   transform: rotate(-30deg) scale(1.1);
 }
 /* 유저가 보기에 250 ~ 300ms가 가장 좋다. */
@@ -308,7 +317,7 @@ p {
 /* category__btn.active 이렇게 코드를 짜면 지금 선택된 것을 의미한다. */
 .category__btn.active,
 .category__btn:hover {
-  background-color: var(--color-pink);
+  background-color: var(--color-dark-blue);
   color: var(--color-white);
 }
 /* 카테고리 버튼이 엑티브인 상태의 카테고리 카운트와 카테고리 버튼이
@@ -431,11 +440,11 @@ p {
 }
 
 .testimonial__speech-bubble a {
-  color: var(--color-pink);
+  color: var(--color-dark-blue);
 }
 
 #contact {
-  background-color: var(--color-pink);
+  background-color: var(--color-dark-blue);
 }
 
 .contact__title,
