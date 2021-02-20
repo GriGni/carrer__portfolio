@@ -18,13 +18,6 @@ function showNavBar() {
 // handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector(".navbar__menu");
 
-const Home = document.querySelector("#home");
-const About = document.querySelector("#about");
-const Skills = document.querySelector("#skills");
-const Work = document.querySelector("#work");
-const Testimonials = document.querySelector("#testimonials");
-const Contact = document.querySelector("#contact");
-
 function BtnScrollIntoView(event) {
   const target = event.target;
   const link = target.dataset.link;
@@ -42,6 +35,15 @@ homeContactBtn.addEventListener("click", () => {
   scrollIntoView("#contact");
 });
 
+// make home slowly fade to transparent as the window scrolls down
+
+const Home = document.querySelector(".home__container");
+const HomeHeight = Home.getBoundingClientRect().height;
+
+function fadeOutHome() {
+  Home.style.opacity = 1 - window.scrollY / HomeHeight;
+}
+
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
@@ -50,6 +52,7 @@ function scrollIntoView(selector) {
 function init() {
   showNavBar();
   navbarMenu.addEventListener("click", BtnScrollIntoView);
+  window.addEventListener("scroll", fadeOutHome);
 }
 
 init();
