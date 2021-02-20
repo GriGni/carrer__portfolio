@@ -135,6 +135,15 @@ p {
   transition: all 300ms ease;
 }
 
+.navbar__toggle-btn {
+  position: absolute;
+  right: 32px;
+  top: 5px;
+  font-size: 24px;
+  color: var(--color-white);
+  display: none;
+}
+
 /* Home */
 #home {
   background: url("../img/background.png") center/cover no-repeat;
@@ -452,4 +461,38 @@ p {
 
 .contact__rigths {
   font-size: x-small;
+}
+
+/* 최소한의 것(차이점)만 들어가야 한다. */
+@media screen and (max-width: 768px) {
+  .navbar__toggle-btn {
+    display: block;
+  }
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+  .about__majors {
+    flex-direction: column;
+  }
+  .major {
+    margin-bottom: 38px;
+  }
+  .skillset {
+    flex-direction: column;
+  }
+  .project {
+    /* flex-grow 화면이 작으면 화면에 맞게 커진다. */
+    flex-grow: 1;
+  }
+  .testimonial__avatar {
+    width: 80px;
+    height: 80px;
+  }
 }
